@@ -19,5 +19,5 @@ describe("passwordChecker2", () => {
       passwordChecker2(["1-3 a: abcde", "1-3 b: cdefg", "2-9 c: ccccccccc"])
     ).toBe(1);
   });
-  //console.log(passwordChecker2(passwordsList), passwordsList.length);
+  console.log(passwordChecker2(passwordsList), passwordsList.length);
 });
