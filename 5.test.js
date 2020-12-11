@@ -1,4 +1,4 @@
-const { boardingPass, highestPass } = require("./5");
+const { boardingPass, highestPass, findBoardingPass } = require("./5");
 const passesList = require("./boardingPasses");
 
 describe("boardingPass", () => {
@@ -8,5 +8,6 @@ describe("boardingPass", () => {
     expect(boardingPass("FFFBBBFRRR")).toBe(119);
     expect(boardingPass("BBFFBBFRLL")).toBe(820);
     console.log("Highest ID: ", highestPass(passesList));
+    console.log("Possible passes:", findBoardingPass(passesList));
   });
 });

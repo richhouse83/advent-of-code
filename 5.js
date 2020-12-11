@@ -42,4 +42,24 @@ function boardingPass(input) {
   return rowArray[0] * 8 + colArray[0];
 }
 
-module.exports = { boardingPass, highestPass };
+function findBoardingPass(list) {
+  const passes = list.split("\n");
+  let passesArray = [];
+
+  passes.forEach((pass) => {
+    const id = boardingPass(pass);
+    passesArray[id] = id;
+  });
+
+  const filtered = [];
+
+  for (let i = 0; i < passesArray.length; i++) {
+    if (passesArray[i] === undefined) {
+      filtered.push(i);
+    }
+  }
+
+  return filtered;
+}
+
+module.exports = { boardingPass, highestPass, findBoardingPass };
